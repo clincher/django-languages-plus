@@ -9,6 +9,9 @@ def associate_countries_and_languages():
         langs = ''
         try:
             langs = country.languages.strip(',')
+        except :
+            print("no languages for the country %s" % country)
+            continue
         if langs:
             codes = langs.split(",")
             for code in codes:
